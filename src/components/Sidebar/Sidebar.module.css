@@ -1,0 +1,95 @@
+.leftSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftTopSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20%;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.1875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.04375rem;
+}
+
+.btnStyle {
+  width: 5.8125rem;
+  height: 5.8125rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #16008b;
+  border: none;
+  cursor: pointer;
+}
+
+.plus {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 4.375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 97.688%;
+  /* 4.27381rem */
+  letter-spacing: 0.0875rem;
+}
+
+.addGroupBtn {
+  position: sticky;
+  right: 2rem;
+  bottom: 3.5rem;
+}
+
+.leftBottomSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 2%;
+  height: 80%;
+  width: 100%;
+  overflow: auto;
+}
+
+.individualGroup {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  padding: 4% 0% 4% 4%;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.groupIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100px;
+  color: white;
+  font-size: 4vh;
+  margin-right: 3%;
+}
+
+.groupName {
+  color: #000;
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.03rem;
+}
