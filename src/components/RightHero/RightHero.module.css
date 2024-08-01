@@ -114,7 +114,7 @@
   height: 58%;
   padding: 5% 5% 0% 5%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .noteDiv {
