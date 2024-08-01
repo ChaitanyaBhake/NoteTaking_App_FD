@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
-import NoteShimmer from '../../components/common/ShimmerUI/GroupNotesShimmer/GroupNotesShimmer'; 
+import toast from 'react-hot-toast';
+import NoteShimmer from '../../components/common/ShimmerUI/GroupNotesShimmer/GroupNotesShimmer';
 import styles from './RightHero.module.css';
 import SingleNote from './SingleNote';
 import sendArrowBlue from '/blue-arrow.jpg';
@@ -23,7 +24,6 @@ const RightHero = (props) => {
 
   let noteInputRef = useRef(null);
 
-  
   const handleInputChange = () => {
     setArrowColor(noteInputRef.current.value);
   };
@@ -94,7 +94,11 @@ const RightHero = (props) => {
       }
 
       const data = await response.json();
-      setNote(data.group.notes || []); // Ensure we set an empty array if no notes
+      setNote(data.group.notes || []); 
+      toast.success('Success', {
+        position: 'top-center',
+        duration: 4000, 
+      });
 
       if (noteInputRef.current) {
         noteInputRef.current.value = '';
@@ -119,7 +123,6 @@ const RightHero = (props) => {
   return (
     <section className={styles.rightSection}>
       {!props.isGroupSelected ? (
-
         //1.Show default image when no group is selected.
         <div className={styles.defaultSection}>
           <div className={styles.defaultMessageWrapper}>
@@ -142,7 +145,6 @@ const RightHero = (props) => {
         //2. Show Group Details if group is selected
         <div className={styles.displayNotesContainer}>
           <div className={styles.notesHeading}>
-           
             <div
               className={styles.navGroupIcon}
               style={{ background: selectedGroupName.color }}

@@ -5,6 +5,7 @@ import RightHero from '../../components/RightHero/RightHero';
 import SideBar from '../../components/Sidebar/Sidebar';
 import { defaultColorOptions } from '../../constants/data';
 import closeIcon from '/icons8-close.svg';
+import toast from 'react-hot-toast';
 
 const Homepage = () => {
   const [createGroupPopUp, setCreateGroupPopup] = useState(false);
@@ -29,8 +30,7 @@ const Homepage = () => {
 
       const data = await response.json();
 
-      console.log(data);
-
+      
       if (data && data.groups) {
         setEveryGroup(data.groups);
       }
@@ -86,6 +86,8 @@ const Homepage = () => {
 
       setPickColors(defaultColorOptions);
       setCreateGroupPopup(false);
+
+      toast.success("Added Group")
     } catch (error) {
       console.log(error.message);
     }

@@ -3,6 +3,7 @@ import dotImage from '/dot.svg';
 import iconClose from '/icons8-close.svg';
 import editImage from "/edit.svg"
 import PropTypes from "prop-types"
+import toast from 'react-hot-toast';
 
 const SingleNote = (props) => {
   const baseUrl = import.meta.env.VITE_BACKEND_URL;
@@ -21,6 +22,7 @@ const SingleNote = (props) => {
         throw new Error('Failed to delete');
       }
       props.fetchNotes();
+      toast.success("Successfully Deleted Note")
     } catch (error) {
       console.log(error);
     }
