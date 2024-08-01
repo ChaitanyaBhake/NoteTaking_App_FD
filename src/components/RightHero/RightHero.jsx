@@ -135,9 +135,9 @@ const RightHero = (props) => {
             </p>
           </div>
           <div className={styles.encryptMsg}>
-            <p>
+            <p style={{display:"flex", gap:"0.5rem"}}>
               <img className={styles.lockIcon} src={lockIcon} alt="Lock Icon" />
-              end-to-end encrypted
+              <p>end-to-end encrypted</p>
             </p>
           </div>
         </div>
